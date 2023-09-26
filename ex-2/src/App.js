@@ -25,7 +25,10 @@ const App = () => {
     setNewName(event.target.value)
   }
 
-  console.log(names)
+  if (names.some((contact) => contact.name === newName)) {
+    alert(`${newName} is already added to phonebook.`)
+    return
+  }
   
 
   return (
